@@ -1,0 +1,27 @@
+{% extends "home.html" %}
+
+{% block title %}Cursos - Coderhouse{% endblock %}
+
+{% block content %}
+<h2>Cursos Disponibles</h2>
+<ul>
+    <li>Phyton</li>
+    <li>C#</li>
+    <li>SQL</li>
+</ul>
+
+<h2>Buscar Cursos</h2>
+<form method="get">
+    {{ busqueda_form.as_p }}
+    <button type="submit">Buscar</button>
+</form>
+
+{% if resultados %}
+<h2>Resultados de la búsqueda</h2>
+<ul>
+    {% for resultado in resultados %}
+    <li>{{ resultado.nombre }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

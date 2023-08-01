@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Coderhouse{% endblock %}</title>
+</head>
+<body>
+    <header>
+       
+        <h1>Coderhouse</h1>
+    </header>
+
+    <nav>
+        
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/cursos/">Cursos</a></li>
+            <li><a href="/contacto/">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer>
+        <p>Gracias por pensar en nosotros</p>
+    </footer>
+</body>
+</html>
